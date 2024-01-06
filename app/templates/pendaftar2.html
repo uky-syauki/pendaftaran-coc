@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+</head>
+
+<body>
+    <!-- Page content-->
+    <section class="py-5">
+        <div class="container-fluid">
+            <!-- daftar form-->
+            <div class="bg-light rounded-4 py-5 px-4 px-md-5">
+                <div class="text-center mb-5">
+                    <img src="{{ url_for('static', filename='img/logo.png')}}" alt="" width="20%">
+                    <!-- <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div> -->
+                    <h1 class="fw-bolder">Pendaftar<br><sup>COCONUT Open Class</sup></h1>
+                    <p class="lead fw-normal text-muted mb-0">Periksa Apakah Pendaftaran Anda Berhasil!</p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-12">
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms daftar Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/daftar-forms-->
+                        <!-- to get an API token!-->
+                        <div class="container-fluid">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Pendaftar COC Bootstrap 2024</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <table class="table table-bordered dataTable" id="dataTable"
+                                                        role="grid" aria-describedby="dataTable_info"
+                                                        style="width: 100%;" width="100%" cellspacing="0">
+                                                        <thead>
+                                                            <tr role="row">
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="dataTable" rowspan="1" colspan="1"
+                                                                    style="width: 30.2px; text-align: center;"
+                                                                    aria-label="Age: activate to sort column ascending">
+                                                                    No</th>
+                                                                <th class="sorting sorting_asc" tabindex="0"
+                                                                    aria-controls="dataTable" rowspan="1" colspan="1"
+                                                                    style="width: 160.717px;" aria-sort="ascending"
+                                                                    aria-label="Name: activate to sort column descending">
+                                                                    Nama</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="dataTable" rowspan="1" colspan="1"
+                                                                    style="width: 264.367px; font-size: 0.9em;"
+                                                                    aria-label="Position: activate to sort column ascending">
+                                                                    Status pembayaran</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="dataTable" rowspan="1" colspan="1"
+                                                                    style="width: 264.367px;"
+                                                                    aria-label="Position: activate to sort column ascending">
+                                                                    Bukti Transfer</th>
+                                                                <th class="sorting" tabindex="0"
+                                                                    aria-controls="dataTable" rowspan="1" colspan="1"
+                                                                    style="width: 264.367px;"
+                                                                    aria-label="Position: activate to sort column ascending">
+                                                                    ACC</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <th rowspan="1" colspan="1" style="text-align: center;">
+                                                                    No</th>
+                                                                <th rowspan="1" colspan="1">Nama</th>
+                                                                <th rowspan="1" colspan="1">Status pembayaran</th>
+                                                                <th rowspan="1" colspan="1">Bukti Transfer</th>
+                                                                <th rowspan="1" colspan="1">ACC</th>
+                                                            </tr>
+                                                        </tfoot>
+                                                        <tbody>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="alert alert-warning alert-dismissible fade" role="alert" id="modal-error"
+        style="top: 65px; position: fixed; z-index: 9; width: 100%;">
+        <!-- <strong><span id="pesanName">Holy guacamole!</span></strong> <span>You should check in on some of those fields below.</span> -->
+        <!-- <button type="button" onclick="tutup()" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span> -->
+        </button>
+    </div>
+    <script>
+        async function fetchData() {
+            try {
+                let response = await fetch('{{ url_for("getData")}}');
+                let data = await response.json();
+                return data; // Sesuaikan dengan struktur respons API Anda
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        async function loadTable() {
+            const data = await fetchData();
+
+            data.forEach(element => {
+                var table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+
+                var newRow = table.insertRow(table.rows.length);
+                var cell1 = newRow.insertCell(0);
+                var cell2 = newRow.insertCell(1);
+                var cell3 = newRow.insertCell(2);
+                var cell4 = newRow.insertCell(3);
+                var cell6 = newRow.insertCell(4);
+
+                cell1.classList.add("tengah");
+
+
+                cell1.innerHTML = `<b>${element.id}</b>`;
+                cell2.innerHTML = element.nama_lengkap;
+                cell4.innerHTML =
+                    `<img src="{{ url_for('static', filename='') }}${element.bukti_tf}" alt="bukti transfer">`;
+
+                if (element.status == 1) {
+                    cell3.innerHTML = "Berhasil";
+                    cell1.classList.add("text-primary");
+                    cell2.classList.add("text-primary");
+                    cell3.classList.add("text-primary");
+                    cell6.innerHTML =
+                        `<button class='btn btn-danger' onclick='update(${element.id})'>Tolak</button>`;
+
+                } else {
+                    cell3.innerHTML = "Pengecekan";
+                    cell6.innerHTML =
+                        `<button class='btn btn-primary' onclick='update(${element.id})'>Terima</button>`;
+                    cell1.style.backgroundColor = "yellow";
+                    cell2.style.backgroundColor = "yellow";
+                    cell3.style.backgroundColor = "yellow";
+                    cell4.style.backgroundColor = "yellow";
+                    cell6.style.backgroundColor = "yellow";
+                }
+
+            });
+        }
+
+
+        let update = (id) => {
+            fetch('{{ url_for("update") }}', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        idd: id
+                    }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+            removeLastChildRow();
+            loadTable();
+        }
+
+        function removeLastChildRow() {
+            // Ambil referensi tabel
+            var table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+            let jumlah = table.rows.length;
+            // Periksa apakah ada baris yang bisa dihapus
+            for (let i = 0; i <= jumlah; i++) {
+                // Hapus elemen anak terakhir dari tabel
+                table.deleteRow(jumlah - (i + 1));
+                console.log(jumlah - (i + 1));
+            }
+        }
+
+        window.onload = loadTable();
+    </script>
+    <!-- Vendor JS Files -->
+    <!-- <script src="{{ url_for('static', filename='assets/vendor/purecounter/purecounter_vanilla.js')}}"></script> -->
+    <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js')}}"></script>
+
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+
+
+
+</body>
+
+</html>

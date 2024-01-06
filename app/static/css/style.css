@@ -2137,3 +2137,11 @@ section {
 .footer .credits a {
   color: #fff;
 }
+
+.tengah {
+  text-align: center;
+}
+
+.kuning {
+  background-color: yellow;
+}

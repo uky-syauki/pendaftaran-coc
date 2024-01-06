@@ -29,6 +29,7 @@ class User(db.Model):
     asal_kampus = Column(String(64))
     bukti_tf = Column(String(64), default="tidak_ada.jpg")
     bukti_follow = Column(String(64), default="tidak_ada.jpg")
+    status = Column(Integer, default=0)
     timestamp = Column(DateTime, default=datetime.utcnow)
     __table_args__ = (UniqueConstraint('nomor_wa', name='unique_nomor_wa'), UniqueConstraint('email',name='unique_email'))
     def __repr__(self):
