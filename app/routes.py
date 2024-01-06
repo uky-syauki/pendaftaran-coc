@@ -85,6 +85,7 @@ def update():
 
 @app.route('/api/getData', methods=['GET'])
 @login_required
+@login_required
 def getData():
 	daftar_calgot = User.query.all()
 	data_jsom = []
