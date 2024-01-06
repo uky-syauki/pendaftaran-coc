@@ -119,6 +119,8 @@
         </button>
     </div>
     <script>
+
+
         async function fetchData() {
             try {
                 let response = await fetch('{{ url_for("getData")}}');
@@ -148,7 +150,7 @@
                 cell1.innerHTML = `<b>${element.id}</b>`;
                 cell2.innerHTML = element.nama_lengkap;
                 cell4.innerHTML =
-                    `<img src="{{ url_for('static', filename='') }}${element.bukti_tf}" alt="bukti transfer">`;
+                    `<img src="{{ url_for('static', filename='') }}${element.bukti_tf}" width="200" alt="bukti transfer">`;
 
                 if (element.status == 1) {
                     cell3.innerHTML = "Berhasil";
