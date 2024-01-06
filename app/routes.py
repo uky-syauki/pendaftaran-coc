@@ -103,17 +103,20 @@ def getData():
 def postData():
 	print('get')
 	nama_lengkap = request.form.get('nama_lengkap')
-	arrData = User.query.with_entities(User.nomor_wa, User.email).all()
+	arrData = User.query.with_entities(User.nama_lengkap,User.nomor_wa, User.email).all()
 	# tersedia = "data sudah ada: "
 	pesan = {}
 	# print(arrData[0])
 	for isi in arrData:
+		nama = request.form.get("nama_lengkap")
 		wa = request.form.get('nomor_wa').replace(' ','')
 		email = request.form.get('email')
 		if wa in isi:
 			pesan['nomor wa'] = wa
 		if email in isi:
 			pesan['email'] = email
+		if nama in isi:
+			pesan["nama"] = nama
 	if len(pesan) == 0:
 		try:
 			photo_tf = request.files['photo_tf']
@@ -140,7 +143,8 @@ def postData():
 			return jsonify({'status': 'success'})
 		except:
 			db.session.rollback()
-			return jsonify({'status': 'error exc', 'pesan':pesan})
+			print(pesan)
+			return jsonify({'status': 'error', 'pesan':pesan})
 	else:
 		db.session.rollback()
 		print(len(pesan) == 0)
