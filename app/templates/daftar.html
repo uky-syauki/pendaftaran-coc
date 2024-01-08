@@ -35,7 +35,50 @@
                 <div class="text-center mb-5">
                     <img src="{{ url_for('static', filename='img/logo.png')}}" alt="" width="20%">
                     <!-- <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div> -->
-                    <h1 class="fw-bolder">Form Pendaftaran<br><sup>COCONUT Open Class<br>COC</sup></h1>
+                    <h1 class="fw-bolder">Form Pendaftaran<br><sup>COCONUT Open Class</sup></h1>
+
+
+
+
+
+
+
+
+                    <!-- informasi -->
+                    <div class="col-sm-6 col-lg-12 mb-4">
+                        <!-- <div class="card text-bg-primary p-3" style="text-align: left;"> -->
+                        <figure class="mb-0">
+                            <blockquote class="blockquote">
+                                <h4>Informasi Pendaftaran</h4>
+                                <h6>
+                                    -Silahkan transfer biaya pendaftaran sebesar Rp 25.000 ke rekening<br>: <kbd>1740
+                                        0065
+                                        17981 (MANDIRI) A/N Galbi Nadifah.</kbd>
+                                    <br> <br>
+                                    -Jangan lupa follow Instagram COCONUTDOTORG<br>: <a
+                                        href="https://www.instagram.com/coconutdotorg?igsh=MTdlMjRlYjZlMQ=="
+                                        target="_blank"><kbd>Klik di sini</kbd></a>
+                                    <br>
+                                </h6>
+                                <h4>Benefit:</h4>
+                                <h6>-Certificate <br>-Snack</h6>
+                            </blockquote>
+
+                            <!-- <figcaption class="blockquote-footer mb-0 text-white">
+                                COCONUT Computer Club <cite title="Source Title"></cite>
+                            </figcaption> -->
+                        </figure>
+                        <!-- </div> -->
+                    </div>
+                    <!-- end informasi -->
+
+
+
+
+
+
+
+
                     <a href="{{ url_for('info')}}">Periksa Status Pembayaran</a>
                     <p class="lead fw-normal text-muted mb-0">Isi formulir dibawah!</p>
                 </div>
@@ -271,7 +314,7 @@
                         let text = "";
                         Object.keys(resData).forEach(key => text +=
                             `<span id="pesanName">${key}:</span><strong> <span>${resData[key]}</strong></span> sudah digunakan! <br>`
-                            );
+                        );
                         text +=
                             '<button class="btn btn-danger" type="button" onclick="tutup()" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">tutup &times;</span>';
                         let modal = document.getElementById('modal-error');
